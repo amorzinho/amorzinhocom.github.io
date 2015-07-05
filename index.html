@@ -12,12 +12,17 @@
 	    		bottom: 0;
 			}
 		</style>
+		<script type="text/javascript">
+			function troca() {
+				var img = Math.floor(Math.random() * 22) + 1;
+				document.getElementById("amz").src = img + ".jpg";
+			}
+		</script>
 	</head>
 	<body>
-		<img id="amz"/>
+		<img id="amz" onclick="troca()" />
 		<script type="text/javascript">
-			var img = Math.floor(Math.random() * 22) + 1;
-			document.getElementById("amz").src = img + ".jpg";
+			troca();
 		</script>
 	</body>
 </html>
