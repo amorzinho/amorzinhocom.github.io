@@ -1,6 +1,23 @@
+<!-- daniel <3 ellen -->
 <html>
-<head><title>amorzinho.com</title></head>
-<body>
-<center>amorzinho.com</center>
-</body>
+	<head>
+		<title>amorzinho.com</title>
+		<style type="text/css">
+			img{
+	    		position: absolute;
+	    		margin: auto;
+	    		top: 0;
+	    		left: 0;
+	    		right: 0;
+	    		bottom: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<img id="amz"/>
+		<script type="text/javascript">
+			var img = Math.floor(Math.random() * 22) + 1;
+			document.getElementById("amz").src = img + ".jpg";
+		</script>
+	</body>
 </html>
