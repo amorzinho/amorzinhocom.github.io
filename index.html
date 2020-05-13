@@ -4,26 +4,29 @@
 		<title>amorzinho.com</title>
 		<style type="text/css">
 			img{
-	    		position: absolute;
-	    		margin: auto;
-	    		top: 0;
-	    		left: 0;
-	    		right: 0;
-	    		bottom: 0;
+	    		    position: absolute;
+    			    margin: auto;
+			    top: 0;
+			    left: 0;
+			    right: 0;
+			    bottom: 0;
+			    max-width: 90%;
+			    cursor: pointer;
 			}
 		</style>
 		<script type="text/javascript">
 			function troca() {
 				var img = Math.floor(Math.random() * 71) + 1;
-				document.getElementById("amz").src = img + ".jpg";
+				var file = img + ".jpg";
+				document.getElementById("amz").src = file;
+				
+				ga('send', 'event', 'Image', 'view', file);
 			}
 		</script>
 	</head>
 	<body>
 		<img id="amz" onclick="troca()"/>
-		<script type="text/javascript">
-			troca();
-		</script>
+		
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -32,7 +35,10 @@
 
 		  ga('create', 'UA-64812130-1', 'auto');
 		  ga('send', 'pageview');
-
+		</script>
+		
+		<script type="text/javascript">
+			troca();
 		</script>
 	</body>
 </html>
