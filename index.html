@@ -15,17 +15,17 @@
 			}
 		</style>
 		<script type="text/javascript">
-			function troca() {
+			function troca(action) {
 				var img = Math.floor(Math.random() * 71) + 1;
 				var file = img + ".jpg";
 				document.getElementById("amz").src = file;
 				
-				ga('send', 'event', 'Image', 'view', file);
+				ga('send', 'event', 'Image', action, file);
 			}
 		</script>
 	</head>
 	<body>
-		<img id="amz" onclick="troca()"/>
+		<img id="amz" onclick="troca('change')"/>
 		
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -38,7 +38,7 @@
 		</script>
 		
 		<script type="text/javascript">
-			troca();
+			troca('pageload');
 		</script>
 	</body>
 </html>
